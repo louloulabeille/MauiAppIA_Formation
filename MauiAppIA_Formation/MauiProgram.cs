@@ -1,4 +1,4 @@
-﻿using MauiAppIA_Formation.Infrastructure;
+﻿using MauiAppIA_Formation.Infrastructure.Extends;
 using Microsoft.Extensions.Logging;
 
 namespace MauiAppIA_Formation

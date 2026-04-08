@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MauiAppIA_Formation.Infrastructure
+namespace MauiAppIA_Formation.Infrastructure.Extends
 {
     public static class ApiConfigExtend
     {

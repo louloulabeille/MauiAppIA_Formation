@@ -1,24 +1,30 @@
-﻿namespace MauiAppIA_Formation
+﻿using MauiAppIA_Formation.Infrastructure.ModelConfiguration;
+using Microsoft.Extensions.Options;
+
+namespace MauiAppIA_Formation
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
+        #region private readonly properties
+        private readonly IOptions<ApiConfig> _api;
+        #endregion
 
-        public MainPage()
+        #region constructeur
+        public MainPage(IOptions<ApiConfig> api)
         {
             InitializeComponent();
-        }
 
-        private void OnCounterClicked(object? sender, EventArgs e)
+            // - passe les valeurs de la configuration de l'api dans la page par injection dépendance 
+            _api = api;
+
+        }
+        #endregion
+
+        #region event handler clicled
+        private void OnSendClicked(object? sender, EventArgs e)
         {
-            count++;
-
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            
         }
+        #endregion
     }
 }
