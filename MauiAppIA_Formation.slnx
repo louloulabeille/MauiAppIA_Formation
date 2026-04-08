@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="MauiAppIA_Formation.Infrastructure/MauiAppIA_Formation.Infrastructure.csproj" />
+  <Project Path="MauiAppIA_Formation/MauiAppIA_Formation.csproj">
+    <Deploy Solution="Debug|*" />
+  </Project>
+</Solution>
