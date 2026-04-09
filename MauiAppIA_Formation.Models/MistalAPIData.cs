@@ -4,6 +4,6 @@
     {
         public string? Agent_id { get; set; }
         public int? Agent_Version { get; set; }
-        public List<Imput>? Imputs { get; set; } = new List<Imput>();
+        public List<Input>? Inputs { get; set; } = new List<Input>();
     }
 }

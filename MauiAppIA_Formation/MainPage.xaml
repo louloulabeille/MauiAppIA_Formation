@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:MauiAppIA_Formation.ViewModel"
+             x:DataType="viewmodel:MainViewModel"
              x:Class="MauiAppIA_Formation.MainPage"
              Shell.BackgroundColor="DarkOrange"
              Title="Requête">
@@ -17,16 +19,16 @@
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
             <Border StrokeThickness="0" BackgroundColor="LightGrey" StrokeShape="RoundRectangle 10,10,10,10">
-                <Label Text="" x:Name="ResponseLabel" TextColor="black" FontSize="18"/>
+                <Label Text="{Binding Response}" x:Name="ResponseLabel" TextColor="black" FontSize="18" />
             </Border>
             <Border StrokeThickness="0" BackgroundColor="LightGrey" StrokeShape="RoundRectangle 10,10,10,10">
-                <Entry Placeholder="Votre question..." x:Name="QuestionEntry"  TextColor="black" FontSize="18"/>
+                <Entry Placeholder="Votre question..." x:Name="QuestionEntry"  TextColor="black" FontSize="18" Text="{Binding Question}"/>
             </Border>
             
             <Button
                 x:Name="SendBtn"
                 Text="Envoyer" 
-                Clicked="OnSendClicked"
+                Command="{Binding SendApiQuestionCommand}"
                 HorizontalOptions="Center" 
                 BackgroundColor="LightGrey" 
                 WidthRequest="150"/>
