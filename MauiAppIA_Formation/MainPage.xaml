@@ -19,7 +19,7 @@
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
             <Border StrokeThickness="0" BackgroundColor="LightGrey" StrokeShape="RoundRectangle 10,10,10,10">
-                <Label Text="{Binding Response}" x:Name="ResponseLabel" TextColor="black" FontSize="18" />
+                <Label Text="{Binding Response}" x:Name="ResponseLabel" TextColor="black" FontSize="18" Padding="5,0,0,0"/>
             </Border>
             <Border StrokeThickness="0" BackgroundColor="LightGrey" StrokeShape="RoundRectangle 10,10,10,10">
                 <Entry Placeholder="Votre question..." x:Name="QuestionEntry"  TextColor="black" FontSize="18" Text="{Binding Question}"/>

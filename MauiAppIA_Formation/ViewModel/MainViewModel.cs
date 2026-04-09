@@ -62,10 +62,13 @@ namespace MauiAppIA_Formation.ViewModel
                 if (result.IsSuccessStatusCode)
                 {
                     var jsonResponse = await result.Content.ReadAsStringAsync();
-                    MessageResult? message = JsonSerializer.Deserialize<MessageResult>(jsonResponse, JsonOptions.GetJsonOptions());
-                    if (message is not null)
+                    MessageResult? messageResult = JsonSerializer.Deserialize<MessageResult>(jsonResponse, JsonOptions.GetJsonOptions());
+                    if (messageResult is not null)
                     {
-                        Response = message.Message ?? string.Empty;
+                        //var retour = JsonSerializer.Deserialize<ResponseJson>(messageResult.Outputs?.LastOrDefault()?.Content?? string.Empty, JsonOptions.GetJsonOptions());
+                        //Response =  retour?.Response ?? string.Empty;
+                        Response = messageResult.Outputs?.LastOrDefault()?.Content ?? string.Empty;
+                        Question = string.Empty;
                     }
                 }
                 else
