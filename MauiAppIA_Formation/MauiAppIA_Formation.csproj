@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFrameworks>net10.0-android</TargetFrameworks>
@@ -73,10 +73,12 @@
 		<PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="10.0.5" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="10.0.51" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.5" />
+		<PackageReference Include="Mistral.SDK" Version="2.3.1" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <ProjectReference Include="..\MauiAppIA_Formation.Infrastructure\MauiAppIA_Formation.Infrastructure.csproj" />
+	  <ProjectReference Include="..\MauiAppIA_Formation.Models\MauiAppIA_Formation.Models.csproj" />
 	</ItemGroup>
 
 </Project>

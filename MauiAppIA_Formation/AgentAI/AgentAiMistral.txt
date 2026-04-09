@@ -1,0 +1,12 @@
+﻿agent id ag_019d6dae6d297340bdabe0274813c289
+
+curl https://api.mistral.ai/v1/conversations \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $MISTRAL_API_KEY" \
+  -d '{
+    "agent_id": "ag_019d6dae6d297340bdabe0274813c289",
+    "agent_version": 0,
+    "inputs": [
+      {"role":"user","content":"Hello!"}
+    ]
+  }'
